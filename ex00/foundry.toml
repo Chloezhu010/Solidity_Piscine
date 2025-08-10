@@ -1,0 +1,13 @@
+[profile.default]
+src = "src"
+out = "out"
+via_ir = false # disenable intermediate representation pipeline
+optimizer = true
+optimizer_runs = 200
+
+[rpc_endpoints]
+local = 'http://localhost:8545'
+sepolia = 'https://sepolia.infura.io/v3/${ALCHEMY_API_KEY}'
+
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }

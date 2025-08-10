@@ -1,5 +1,6 @@
 # Deployment
 ## Deployed contract address
+- HelloEthereum deployed to: 0x044ceb92330F59A53b2E43B82953A124601b4099
 ## Steps to delopy and verify
 ## Notes
 ### What's forge, cast, anvil
@@ -45,3 +46,24 @@
     ```
 ### Data location in solidity - storage, memory, calldata
 - Ref: https://solidity-by-example.org/data-locations/
+- Storage: permanent onchain storage
+    - Most expensive: c.20k gas to write, c.5k gas to modify
+    - Use for: Contract state var that need to persist
+- Memory: temp in-memory storage
+    - Temp: only exists during function execution
+    - Moderate cost: c. 3 gas per 32-byte word
+    - Mutable: can be modified within the function
+    - Use for: Function parameters, local var, temp data
+- Calldata: read-only function input data
+    - Cheapest: no copying cost, direct access to tx data
+    - External only: only be used for external/ public function parameters
+    - Use for: Function parameters you don't need to modify
+### Useful cmd
+- For compilation: `forge build`
+- For deployment on sepolia:
+```
+forge create --rpc-url sepolia \
+  --private-key $PRIVATE_KEY \
+  --constructor-args "Hello Sepolia!" \
+  src/HelloEthereum.sol:HelloEthereum
+```

@@ -7,7 +7,7 @@ optimizer_runs = 200
 
 [rpc_endpoints]
 local = 'http://localhost:8545'
-sepolia = 'https://sepolia.infura.io/v3/${ALCHEMY_API_KEY}'
+sepolia = 'https://sepolia.infura.io/v3/${INFURA_API_KEY}'
 
 [etherscan]
 sepolia = { key = "${ETHERSCAN_API_KEY}" }

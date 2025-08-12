@@ -1,6 +1,6 @@
 # Deployment
 ## Deployed contract address
-- HelloEthereum deployed to: 0x044ceb92330F59A53b2E43B82953A124601b4099
+- HelloEthereum deployed to: 0xf0990A8deb64fD72258Ffd824806d39c821889C7
 ## Steps to delopy and verify
 ## Notes
 ### What's forge, cast, anvil
@@ -60,10 +60,8 @@
     - Use for: Function parameters you don't need to modify
 ### Useful cmd
 - For compilation: `forge build`
-- For deployment on sepolia:
-```
-forge create --rpc-url sepolia \
-  --private-key $PRIVATE_KEY \
-  --constructor-args "Hello Sepolia!" \
-  src/HelloEthereum.sol:HelloEthereum
-```
+- Deployment of HelloEthereum on sepolia: 
+`forge script script/Deploy.s.sol:Deploy --rpc-url sepolia --broadcast`
+- Verify if the contract actually deployed to sepolia: 
+`cast code <Contract address> --rpc-url sepolia`
+

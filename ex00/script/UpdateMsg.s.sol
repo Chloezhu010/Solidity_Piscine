@@ -12,7 +12,7 @@ contract UpdateMsg is Script {
         address contractAddress = vm.envAddress("CONTRACT_ADDRESS");
         console.log("Using rpc url: ", rpcUrl);
         console.log("Contract address: ", contractAddress);
-        
+
         HelloEthereum hello = HelloEthereum(contractAddress); // cast to HelloEthereum type
 
         // read current message

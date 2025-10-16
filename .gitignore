@@ -10,6 +10,13 @@ states/
 *.dbg.json
 *.tsbuildinfo
 
+# Build outputs
+cache/
+**/cache/
+out/
+**/out/
+
 # Optional
 .env
 .env.local
+*.DS_Store

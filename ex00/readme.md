@@ -58,7 +58,7 @@
         ✅ Sequence #1 on sepolia | Total Paid: 0.00000266434960708 ETH (27380 gas * avg 0.097310066 gwei)
         ```
 - Verify the transactions on sepolia etherscan
-    - 
+    - Deploy HelloEthereum tx: https://sepolia.etherscan.io/tx/0xcf333bb468530d71cec7d9738141a20f0e5c71ec9f92ce4f24ca4f8ccea48ec5
     - Update message tx: https://sepolia.etherscan.io/tx/0xbc3146d385360af5773a1624d761cd2e2d9568a22e312d04678356857feea3b2
 ## Notes
 ### What's forge, cast, anvil
